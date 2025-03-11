@@ -15,3 +15,4 @@ mv ./.profile ..
 git clone https://github.com/NvChad/starter ~/.config/nvim 
 sudo apt update
 sudo apt install gh -y
+source .bashrc
