@@ -1,0 +1,11 @@
+[safe]
+	directory = /home/theodore/ML-proof-of-concept
+  directory = /home/theodore/lv-data
+  directory = /home/theodore/base_cfg 
+  directory = /home/theodore/asmodee-data 
+[user]
+	email = tgillot@albertschool.com
+  name = TheodoreGillot
+[credential]
+  helper = store --file ~/.credentials
+  helper = cache --timeout 30000
