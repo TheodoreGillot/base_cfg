@@ -121,5 +121,4 @@ fi
 cd ~
 source .venv/bin/activate
 
-export GPG_TTY=$(tty)
 export PATH="$HOME/bin:$PATH"
