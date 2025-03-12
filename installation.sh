@@ -6,13 +6,10 @@ ln -s ~/bin/nvim.appimage ~/bin/nvim
 echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc 
 source ~/.bashrc 
 nvim --version
-cd ~/base_cfg 
-mv ./.bashrc ..
-mv ./.aliases.sh ..
-mv ./.profile ..
 [ ! -d "$HOME/.config" ] && mkdir -p "$HOME/.config"
 [ -d "$HOME/.config/nvim" ] && rm -rf "$HOME/.config/nvim"
 git clone https://github.com/NvChad/starter ~/.config/nvim 
 sudo apt update
 sudo apt install gh -y
 source .bashrc
+cd ~
