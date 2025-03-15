@@ -1,4 +1,5 @@
 sudo apt update
+sudo apt install npm
 sudo apt install fuse
 sudo apt install git
 sudo apt install wget
@@ -24,7 +25,7 @@ sudo apt install unrar
 sudo apt install unzip
 sudo apt install p7zip-full
 sudo apt install rsync
-sudo apt install python2.7
+sudo apt install python 3.8
 sudo apt install ext4fuse
 sudo apt install python3-venv
 sudo apt install iptables
