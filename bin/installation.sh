@@ -27,6 +27,4 @@ sudo rm -rf "$CONFIG_DIR/nvim/.git" "$CONFIG_DIR/nvim/.github"
 
 chown -R "$SUDO_USER:$SUDO_USER" "$CONFIG_DIR/nvim"
 
-sudo apt install -y fuse
-
 source "$USER_HOME/.bashrc"

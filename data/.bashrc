@@ -118,7 +118,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-cd ~
-source .venv/bin/activate
-
 export PATH="$HOME/bin:$PATH"

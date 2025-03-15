@@ -1,5 +1,4 @@
-cp .aliases.sh ..
-cp .bashrc ..
-cp .profile ..
-cp .gitconfig ..
-cd ..
+cp ../data/.aliases.sh ..
+cp ../data/.bashrc ..
+cp ../data/.profile ..
+cp ../data/.gitconfig ..
