@@ -31,11 +31,11 @@ First run base_cfg/bin/requirements.sh
 
 '''bash
 cd base_cfg/bin
-sudo bash requirements.sh 
+sudo bash requirements.sh
 '''
 
 Then the installation process : 
 
 '''bash 
-sudo bash installation.sh 
+sudo bash installation.sh
 '''
