@@ -22,20 +22,20 @@ With this installation you will find :
 
 I recommended to clone the repo in user's home directory : 
 
-'''bash
+```bash
 cd ~
 git clone https://github.com/TheodoreGillot/base_cfg.git
-'''
+```
 
 First run base_cfg/bin/requirements.sh
 
-'''bash
+```bash
 cd base_cfg/bin
 sudo bash requirements.sh
-'''
+```
 
 Then the installation process : 
 
-'''bash 
+```bash 
 sudo bash installation.sh
-'''
+```
