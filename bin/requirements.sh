@@ -1,4 +1,5 @@
 sudo apt update
+sudo apt install crudini
 sudo apt install npm
 sudo apt install fuse
 sudo apt install git

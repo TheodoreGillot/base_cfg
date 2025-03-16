@@ -11,20 +11,8 @@ cp ../data/.bashrc "$USER_HOME"
 cp ../data/.profile "$USER_HOME"
 cp ../data/.gitconfig "$USER_HOME"
 
-sudo apt-get install git
-
-function parse_cfg() {
-  local file "$1"
-  local section "$2"
-  local key "$3"
-
-  
-  sed -n -e "/^\[$section\]/,/^\[/p" "$file" \
-    | sed -n -e "s/^\s*$key\s*=\s*\(.*\)\s*$/\1/p"
-}
-
-EMAIL=$(parse_cfg "$CONFIG_FILE" cfg email)
-NAME=$(parse_cfg "$CONFIG_FILE" cfg name)
+EMAIL=$(crudini "$CONFIG_FILE" cfg mail)
+NAME=$(crudini "$CONFIG_FILE" cfg username)
 
 git config --global user.email "$EMAIL"
 git config --global user.name "$NAME"
