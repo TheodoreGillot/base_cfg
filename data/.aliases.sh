@@ -88,10 +88,6 @@ function cz () {
   tar -I pigz -cf "`basename $1`.tar.gz" $1
 }
 
-function srvsave () {
-  rsync --delete-after --rsync-path="sudo rsync" -aAX --info=progress2 --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} srv.sav:/ /media/data/info/os/srv-backup
-}
-
 function vl() {
   dir=$(realpath "$1")
   editor "$dir"/$(ls -t $dir | head -1)
@@ -106,21 +102,6 @@ function gls() {
   git log --all --grep="$1"
 }
 
-function ipfwd() {
-  src=$1
-  dst=$2
-  port=$3
-  sudo iptables -t nat -A PREROUTING -p tcp --dport $port -j DNAT --to-destination $dst:$port
-  sudo iptables -t nat -A POSTROUTING -p tcp -d $dst --dport $port -j SNAT --to-source $src
-  sudo bash -c 'echo 1 > /proc/sys/net/ipv4/ip_forward'
-}
-
-function servethis() {
-  IP=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
-  echo "http://$IP:8000"
-  python2.7 -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'
-}
-
 function setpythonenv(){
     name=$1
     if [[ -z $PYTHONPATH ]]; then
@@ -130,13 +111,3 @@ function setpythonenv(){
     fi
     source ~/.venvs/$name/bin/activate
 }
-
-function mount_ext4(){
-    diskutil list
-    printf '\t- choose partition to mount: '
-    read partition
-    printf '\t- choose mount point: '
-    read point
-    sudo ext4fuse /dev/$partition $point -o allow_other && echo "done"
-}
-
