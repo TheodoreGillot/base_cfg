@@ -52,6 +52,10 @@ alias cc='sync; echo 3 | sudo tee /proc/sys/vm/drop_caches'
 alias dds='sudo pkill -USR1 dd'
 alias setenv='setpythonenv python-3'
 
+function gm() {
+    git commit -m "$*"
+}
+
 function mkc() {
   mkdir -p $1 && cd $1
 }
