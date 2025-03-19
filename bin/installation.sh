@@ -5,11 +5,13 @@ BIN_DIR="$USER_HOME/bin"
 CONFIG_DIR="$USER_HOME/.config"
 STATE_DIR="$USER_HOME/.local/state"
 CONFIG_FILE="../cfg/config.ini"
+SERVICE=$(crudini "$CONFIG_FILE" cfg service)
+DATA_DIR="../${SERVICE}-data"
 
-cp ../data/.aliases.sh "$USER_HOME"
-cp ../data/.bashrc "$USER_HOME"
-cp ../data/.profile "$USER_HOME"
-cp ../data/.gitconfig "$USER_HOME"
+cp "$DATA_DIR/.aliases.sh" "$USER_HOME"
+cp "$DATA_DIR/.bashrc" "$USER_HOME"
+cp "$DATA_DIR/.profile" "$USER_HOME"
+cp "$DATA_DIR/.gitconfig" "$USER_HOME"
 
 EMAIL=$(crudini "$CONFIG_FILE" cfg mail)
 NAME=$(crudini "$CONFIG_FILE" cfg username)
