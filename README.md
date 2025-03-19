@@ -15,10 +15,22 @@ With this installation you will find :
 
 ### Requirements
 
+#### Service
+
 - Ubuntu 22.04 LTS and above (only 22.04 and 24.04 were tested)
-- Sudoer leve lpermission is highly recommended
+- Unix based distros and MacOS
+
+#### User 
+
+- Sudoer level permission is highly recommended
 
 ## installation
+
+### Configuration 
+
+Make sure to first take a look in ```cfg/``` and fulfill the ```config.ini file```
+
+### Process 
 
 I recommended to clone the repo in user's home directory : 
 
