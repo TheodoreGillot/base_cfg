@@ -1,7 +1,0 @@
-[safe] 
-[user]
-	email = 
-  name = 
-[credential]
-  helper = store --file ~/.credentials
-  helper = cache --timeout 30000
