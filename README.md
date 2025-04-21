@@ -17,8 +17,9 @@ With this installation you will find :
 
 #### Service
 
-- Ubuntu 22.04 LTS and above (only 22.04 and 24.04 were tested)
-- Unix based distros and MacOS
+- Bash Ubuntu 22.04 LTS and above (only 22.04 and 24.04 were tested)
+- Unix based MacOS distros
+- Little disclaimer, pretty much all distros that supports bash should work, as long as you're not using windows or any shell based terminal.
 
 #### User 
 
