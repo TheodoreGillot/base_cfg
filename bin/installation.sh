@@ -6,9 +6,7 @@ CONFIG_DIR="$USER_HOME/.config"
 STATE_DIR="$USER_HOME/.local/state"
 CONFIG_FILE="../cfg/config.ini"
 DATA_DIR="../bash-data" #TODO change service adaptability
-
 OS="$(crudini "$CONFIG_FILE" cfg service)"
-
 arch=$(uname -m)
 osname=$(uname -s)
 
