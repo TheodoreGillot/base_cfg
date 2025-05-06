@@ -54,3 +54,5 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 setopt AUTO_CD              # If command is a directory path, cd to it
 setopt AUTO_PUSHD          # Push directories onto directory stack
 setopt PUSHD_IGNORE_DUPS   # Don't push duplicates onto directory stack
+
+cd ~
